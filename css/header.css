@@ -1,0 +1,119 @@
+header {
+  position: relative;
+}
+@keyframes headerdown{
+  0%{
+    transform: translateY(-40px);
+    opacity: 0;
+  }
+  100%{
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+header .wrap {
+  height: 100px;
+  position: relative;
+}
+@keyframes widthfull{
+  100%{
+    width: 100%;
+  }
+}
+header .wrap nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  flex-wrap: wrap;
+}
+header .wrap nav .ham{
+  display: none;
+}
+header .wrap nav h1 {
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+header .wrap nav h1 a::before{
+ content: "";  
+ background-image: url(../img/title_logo.png);
+ width: 25px;
+ height: 25px;
+ display: block;
+ background-repeat: no-repeat;
+ background-size: contain;
+}
+header .wrap nav h1:hover::before{
+  width: 120%;
+}
+header .wrap nav h1 a {
+  color: #012c81;
+  position: relative;
+  line-height: 2;
+  align-items: center;
+  display: flex;
+  font-weight: bold;
+  font-size: 16px;
+}
+header .wrap nav h1 a span {
+  
+  font-size: 0;
+  width: 68px;
+  height: 42px;
+  display: inline-block;
+  vertical-align: middle;
+  background-image: url(../img/logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 15px;
+}
+header .wrap nav ul.gnb {
+  
+  width: auto;
+  display: flex;
+  gap: 50px;
+}
+header .wrap nav ul.gnb li {
+  
+}
+header .wrap nav ul.gnb li a {
+  padding: 26px 40px;
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+}
+header .wrap nav ul.gnb li a span{
+}
+header .wrap nav ul.gnb li a span:hover {
+    border-bottom: 2px solid #2f90ff;
+}
+/* 기타 메뉴  */
+header .wrap nav ul.enb {
+  
+}
+header .wrap nav ul.enb li {
+  
+}
+header .wrap nav ul.enb li a {
+  padding: 0 9px;
+  line-height: 2;
+  display: inline-block;
+  position: relative;
+  font-weight: 300;
+  font-size: 13px;
+}
+header .wrap nav ul.enb li a:hover {
+  color: #1253fa;
+}
+header .wrap nav ul.enb li:nth-child(1) a::after,header .wrap nav ul.enb li:nth-child(2) a::after{
+  content: "";
+  border-right: 1px solid #666;
+  height: 8px;
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  top: calc(50% - 3px);
+}

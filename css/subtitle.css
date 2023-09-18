@@ -1,0 +1,17 @@
+div#subtitle {
+  min-height: 380px; 
+
+}
+div#subtitle .wrap {
+  max-width: 100%;
+  position: relative;
+}
+div#subtitle .wra img{
+  width: 100%;
+}
+
+
+
+
+
+

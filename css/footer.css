@@ -1,0 +1,209 @@
+footer {
+  background-color: #181C22;
+  color: #7b7b7b;
+}
+footer a{
+  color: #9a9a9a;
+}
+footer div.wrap {
+  max-width: 1200px;
+}
+footer div.wrap ul.fnb {
+  
+  padding-bottom: 50px;
+}
+footer div.wrap ul.fnb li:not(.sublist li) {
+  
+  width: calc(100% / 5);
+  text-align: center;
+}
+footer div.wrap ul.fnb li h2{
+  
+  padding-bottom: 35px;
+  font-weight: lighter;
+}
+footer div.wrap ul.fnb li h2:first-child a{
+  
+  color: white;
+}
+footer div.wrap ul.fnb li:first-child ul{
+  
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-row-gap: 15px;
+}
+footer div.wrap ul.fnb li > ul{
+  
+  row-gap: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+footer div.wrap ul.fnb li > ul li{
+  
+}
+footer div.wrap ul.fnb li a {
+  font-weight: lighter;
+  font-size: 15px; 
+}
+footer div.wrap ul.fnb2{
+
+  justify-content: center;
+  margin-right: 50px;
+}
+footer div.wrap ul.fnb2 .fnb2box:nth-of-type(1) > .fba{
+  
+  color: #0d5ffb;
+  font-weight: 500;
+}
+footer div.wrap ul.fnb2 .fnb2box{
+  
+  border-top: 1px solid #666;
+  border-bottom: 1px solid #666;
+  align-items: center;
+  display: flex;
+  transition: all 0.7s;
+}
+footer div.wrap ul.fnb2 .fnb2box:hover{
+  background-color: #4e4e4e;
+}
+
+footer div.wrap ul.fnb2 li .fba{
+ 
+  color: #9a9a9a;
+}
+footer div.wrap ul.fnb2 li .fba:not(ul.fnb2 li:first-child a){
+  
+  padding: 15px 15px 15px 15px;
+}
+footer div.wrap ul.fnb2 li:nth-child(-n+6) .fba{
+  border-right: 1px solid #9a9a9a;
+  padding: 15px 15px 15px 15px;
+}
+footer div.wrap ul.fnb2 li:nth-of-type(7) .fba{
+  
+}
+footer div.wrap address {  
+  line-height: 1.4;
+  padding-top: 50px;
+  text-align: center;
+}
+footer div.wrap address a {
+  
+}
+footer div.wrap p.copyright {  
+  text-align: center;
+}
+footer .btop{
+  width: 80px;
+  height: 80px;
+  display: block;
+  background-color: #2f3339;
+  font-size: 0;
+  background-image: url(../img/uparrow.svg);
+  background-size: 40%;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: rotate(90deg);
+  position: fixed;
+  right: 140px;
+  bottom: calc(234.8px - 40px);
+  border-radius: 50%;
+  bottom: 30px;
+}
+/* 하이트 진로 sns & 패밀리 사이트 */
+footer div.wrap ul.fnb2 .fsns{  
+  position: relative;
+  padding: 0px;
+  border-left: 1px solid;
+  box-sizing: border-box;
+}
+footer div.wrap ul.fnb2 li .snstitle{ 
+  padding: 15px 15px;
+  color: #adadad;
+  display: flex;
+  align-items: center;
+}
+footer div.wrap ul.fnb2 li .snstitle span{
+  
+  background-image: url(../img/arrowup.svg);
+  width: 20px;
+  height: 20px;
+  display: block;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+footer div.wrap ul.fnb2 li .snslist{
+  position: absolute;
+  bottom: 50px;
+  left: -1px;
+  background-color: #4e4e4e;
+  width: 136px;
+  /*! display: none; */
+  line-height: 2;
+  overflow: hidden;
+}
+footer div.wrap ul.fnb2 li .snslist li{
+  transition: all 0.7s;
+}
+footer div.wrap ul.fnb2 li .snslist li a{  
+  color: #adadad;
+  padding: 10px 0;
+  padding-left: 0px;
+  padding-left: 25px;
+  padding-right: 25px;
+  white-space: nowrap;
+  display: flex;
+  justify-content: center;
+}
+footer div.wrap ul.fnb2 .ffm{  
+  position: relative;
+  border-left: 1px solid;
+  padding: 0;
+}
+footer div.wrap ul.fnb2 li .fmtitle{
+  padding-left: 15px;
+  color: #adadad;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+}
+footer div.wrap ul.fnb2 li .fmtitle span{ 
+  background-image: url(../img/arrowup.svg);
+  width: 20px;
+  height: 20px;
+  display: block;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+footer div.wrap ul.fnb2 li .fmlist{  
+  position: absolute;
+  bottom: 50px;
+  left: -1px;
+  background-color: #4e4e4e;
+  width: 121.5px;
+  /*! display: none; */
+  line-height: 2;
+  overflow: hidden;
+}
+footer div.wrap ul.fnb2 li .fmlist li{
+  
+}
+footer div.wrap ul.fnb2 li .fmlist li a{  
+  color: #adadad;
+  padding: 10px 20px 10px 20px;
+  white-space: nowrap;
+  display: flex;
+  justify-content: center;
+}
+footer div.wrap ul.fnb2 .fsns:hover, footer div.wrap ul.fnb2 .ffm:hover{
+  background-color: #4e4e4e;
+}
+footer div.wrap ul.fnb2 li .snslist li:hover, footer div.wrap ul.fnb2 li .fmlist li:hover{  
+  background: rgba(0,0,0,0.2);
+  color: white;
+}
+footer div.wrap ul.fnb2 li .snslist li a:hover, footer div.wrap ul.fnb2 li .fmlist li a:hover{  
+  color: white;
+}

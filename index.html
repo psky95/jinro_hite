@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>하이트진로</title>
+
+    <!-- 지정 클래스 스타일 -->
+    <style>
+        .hover-color{
+            color: #31ffe9;
+            display: inline-block;
+        }
+    </style>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.css">
+    <link rel="stylesheet" href="css/reset.css">
+
+    <!-- 프리텐다드 폰트적용 -->
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css" />
+
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/header-wgnb.css">
+    <link rel="stylesheet" href="css/sgnb.css">
+    <link rel="stylesheet" href="css/sgnb_menu.css">
+    <link rel="stylesheet" href="css/title.css">
+    <link rel="stylesheet" href="css/subtitle.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/footer.css">
+
+     <!-- 제이쿼리 연결 -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        
+        $(document).ready(function(){
+            // 푸터영역 SNS / 패밀리사이트 토글슬라이드
+            $("footer div.wrap ul.fnb2 li .snslist").hide();
+            $("footer div.wrap ul.fnb2 li .fmlist").hide();
+
+            $("footer div.wrap ul.fnb2 .fsns").hover(function(){
+                $("footer div.wrap ul.fnb2 li .snslist").slideToggle(300);
+            });
+            $("footer div.wrap ul.fnb2 .ffm").hover(function(){
+                $("footer div.wrap ul.fnb2 li .fmlist").slideToggle(300);
+            });
+            
+            // gnb li hover시 span 스타일링
+            // for (let i=0; i<4; i++){
+            //     $("header .wrap nav ul.gnb li("+i+")").hover(function(){
+
+            //     });
+            // }
+
+        });
+
+         $(document).ready(function(){
+            //  wgnb 스타일
+            for (let i = 0; i < 6; i++) {
+                $("#top .wsub:eq("+i+")").hover(
+                    function(){
+                        $(this).css("background", "rgba(1, 27, 245, .4)");
+                        $(this).children("h2").children("a").css("color", "#31ffe9");
+                        $(this).children("h2").children("a").children("span").css("border-top", "1px solid#31ffe9");
+                    },
+                    function(){
+                        $(this).css("background", "");
+                        $(this).children("h2").children("a").css("color", "");
+                        $(this).children("h2").children("a").children("span").css("border-top", "");
+                    }
+                );
+            }
+            // wgnb2 스타일
+            for (let i = 0; i < 3; i++) {
+                $("#top .wsub2:eq("+i+")").hover(
+                    function(){
+                        $(this).css("background", "rgba(1, 27, 245, .4)");
+                        $(this).children("h2").children("a").css("color", "#31ffe9");
+                        $(this).children("h2").children("a").children("span").css("border-top", "1px solid#31ffe9");
+                    },
+                    function(){
+                        $(this).css("background", "");
+                        $(this).children("h2").children("a").css("color", "");
+                        $(this).children("h2").children("a").children("span").css("border-top", "");
+                    }
+                );
+            }
+            // wgnb3 스타일
+            for (let i = 0; i < 6; i++) {
+                $("#top .wsub3:eq("+i+")").hover(
+                    function(){
+                        $(this).css("background", "rgba(1, 27, 245, .4)");
+                        $(this).children("h2").children("a").css("color", "#31ffe9");
+                        $(this).children("h2").children("a").children("span").css("border-top", "1px solid#31ffe9");
+                    },
+                    function(){
+                        $(this).css("background", "");
+                        $(this).children("h2").children("a").css("color", "");
+                        $(this).children("h2").children("a").children("span").css("border-top", "");
+                    }
+                );
+            }
+            // wgnb4 스타일
+            for (let i = 0; i < 2; i++) {
+                $("#top .wsub4 div:eq("+i+")").hover(
+                    function(){
+                        $(this).css("background", "rgba(1, 27, 245, .4)");
+                        $(this).children("h2").children("a").css("color", "#31ffe9");
+                        $(this).children("h2").children("a").children("span").css("border-top", "1px solid#31ffe9");
+                    },
+                    function(){
+                        $(this).css("background", "");
+                        $(this).children("h2").children("a").css("color", "");
+                        $(this).children("h2").children("a").children("span").css("border-top", "");
+                    }
+                );
+            }
+            // wgnb 토글 슬라이드
+            $("#top .wgnb").hide();
+            $("#top .wgnb2").hide();
+            $("#top .wgnb3").hide();
+            $("#top .wgnb4").hide();
+            $("header .wrap nav ul.gnb .company").hover(function(){
+                $("#top .wgnb").stop().slideToggle(300);
+            });
+            $("header .wrap nav ul.gnb .social").hover(function(){
+                $("#top .wgnb2").stop().slideToggle(300);
+            });
+            $("header .wrap nav ul.gnb .esg").hover(function(){
+                $("#top .wgnb3").stop().slideToggle(300);
+            });
+            $("header .wrap nav ul.gnb .customer").hover(function(){
+                $("#top .wgnb4").stop().slideToggle(300);
+            });
+
+        });
+
+        //  protect 메뉴 mosuehover
+        $(document).ready(function(){
+            for(let i=0;i<9;i++){
+                $("#product .wrap .list li:eq("+i+") figure").nextAll().wrapAll("<div class='textwrap'></div>");
+                $("#product .wrap .list li:eq("+i+") .textwrap h3").insertBefore("#product .wrap .list li:eq('+i+') .textwrap");   
+                $("#product .wrap .list li .textwrap h3").prependTo("#product .wrap .list li:eq("+i+")");
+            }
+                $("#product .wrap .list li .textwrap>*").hide();
+                $("#product .wrap .list li").hover
+                
+                    (function(){
+                        $(this).children(".textwrap").stop().animate({"width":"100%"},200,function(){
+                            $(this).contents().fadeIn(100);                      
+                        });
+                    },
+                    function(){
+                        $(this).children(".textwrap").contents().fadeOut(100,function(){
+                            $(this).parent().stop().animate({"width":"0%"},200);                      
+                        });
+                    }
+                    
+                );
+                
+        });
+
+    </script> 
+
+    <!-- 슬릭 -->
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <script type="text/javascript" src="slick/slick.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.titleslick').slick({
+                autoplay: true,
+                autoplaySpeed: 3000,
+                fade: true,
+                speed: 1000
+            });
+            $('.snsslick').slick({
+                dots:true,
+                infinite: true,
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                speed:1000,
+                prevArrow: false,
+                nextArrow: false
+
+            });
+        });
+    </script>
+
+</head>
+<body>
+    <!-- 상단영역 -->
+   <header id="top">
+        <div class="wrap">
+            <nav>
+                <h1 class="h5">
+                    <a href="" class="a">하이트진로</a>
+                </h1>
+                <ul class="gnb flex">
+                    <li class="company"><a href="" class="a"><span>COMPANY</span></a>
+                        <div class="wgnb">
+                            <div class="center flex">
+                                <div class="wsub-company">
+                                    <h2><a href="">인사말</a></h2>
+                                    <h2><a href="">경영철학</a></h2>
+                                    <h2><a href="">연혁</a></h2>
+                                </div>
+                                <div class="wsub">
+                                    <h2><a href=""><span></span>Introduction</a></h2>
+                                    <ul class="text-center">
+                                        <li><a href="">CJ</a></li>
+                                        <li><a href="">하이트진로 폰트</a></li>
+                                        <li><a href="">국제화</a></li>
+                                        <li><a href="">계열사 안내</a></li>
+                                    </ul>
+                                </div>
+                                <div class="wsub">
+                                    <h2><a href=""><span></span>Investment</a></h2>
+                                    <ul class="text-center">
+                                        <li><a href="">IR정보</a></li>
+                                        <li><a href="">전자공고</a></li>
+                                        <li><a href="">공시</a></li>
+                                        <li><a href="">공시정보 관리규정</a></li>
+                                    </ul>
+                                </div>
+                                <div class="wsub">
+                                    <h2><a href=""><span></span>Location</a></h2>
+                                    <ul class="text-center">
+                                        <li><a href="">본사</a></li>
+                                        <li><a href="">지점</a></li>
+                                        <li><a href="">공장</a></li>
+                                        <li><a href="">계열사</a></li>
+                                        <li><a href="">해외법인</a></li>
+                                    </ul>
+                                </div>
+                                <div class="wsub">
+                                    <h2><a href=""><span></span>Factory</a></h2>
+                                    <ul class="text-center">
+                                        <li><a href="">공장소개</a></li>
+                                        <li><a href="">견학신청</a></li>
+                                        <li><a href="">신청상태</a></li>
+                                    </ul>
+                                </div>
+                                <div class="wsub">
+                                    <h2><a href=""><span></span>Recruit</a></h2>
+                                    <ul class="text-center">
+                                        <li><a href="">인재상</a></li>
+                                        <li><a href="">직무소개</a></li>
+                                        <li><a href="">채용절차</a></li>
+                                        <li><a href="">복리후생</a></li>
+                                        <li><a href="">채용공고</a></li>
+                                        <li><a href="">지원자도우미</a></li>
+                                    </ul>
+                                </div>
+                                <div class="wsub">
+                                    <h2><a href=""><span></span>Sports</a></h2>
+                                    <ul class="text-center">
+                                        <li><a href="">골프선수</a></li>
+                                        <li><a href="">골프대회</a></li>
+                                        <li><a href="">기타 스포츠</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="social"><a href="" class="a"><span>SOCIAL & MEDIA</span></a>
+                        <div class="wgnb2">
+                            <div class="center flex">
+                                <div class="wsub2">
+                                    <h2><a href=""><span></span>Social board</a></h2>
+                                    <ul class="text-center">
+                                        <li class="wsub2sns"><a href="">당신의 인생을 더 큰 즐거움과 에너지로<br>채우는 하이트진로의 다양한 소셜채널을 <br>지금 바로 확인해 보세요!</a></li>
+                                        <li class="wsub2logo"><a href=""><span></span><span></span><span></span><span></span><span></span></a></li>
+                                    </ul>
+                                </div>
+                                <div class="wsub2">
+                                    <h2><a href=""><span></span>Media</a></h2>
+                                    <ul class="text-center">
+                                        <li><a href="">공지사항</a></li>
+                                        <li><a href="">보도자료</a></li>
+                                        <li><a href="">광고 자료관</a></li>
+                                        <li><a href="">제품 자료관</a></li>
+                                    </ul>
+                                </div>
+                                <div class="wsub2">
+                                    <h2><a href=""><span></span>마케팅 성공사례</a></h2>
+                                    <ul class="text-center">
+                                        <li><a href="">하이트 성공사례</a></li>
+                                        <li><a href="">참이슬 성공신화</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="esg"><a href="" class="a"><span>ESG</span></a>
+                        <div class="wgnb3">
+                            <div class="center flex">
+                                <div class="wsub3">
+                                    <h2><a href=""><span></span>지속가능환경경영</a></h2>
+                                    <ul class="text-center">
+                                        <li><a href="">Introduction</a></li>
+                                        <li><a href="">2050 to zerO!</a></li>
+                                        <li><a href="">SCV</a></li>
+                                        <li><a href="">2050 to zerO!</a></li>
+                                    </ul>
+                                </div>
+                                <div class="wsub3">
+                                    <h2><a href=""><span></span>식품안전경영</a></h2>
+                                    <ul class="text-center">
+                                        <li><a href="">경영방침</a></li>
+                                        <li><a href="">인증현황</a></li>
+                                        <li><a href="">Q-UP System</a></li>
+                                    </ul>
+                                </div>
+                                <div class="wsub3">
+                                    <h2><a href=""><span></span>안전보건경영</a></h2>
+                                    <ul class="text-center">
+                                        <li><a href="">Q-UP System</a></li>
+                                        <li><a href="">인증현황</a></li>
+                                        <li><a href="">안전보건활동 현황</a></li>
+                                    </ul>
+                                </div>
+                                <div class="wsub3">
+                                    <h2><a href=""><span></span>CSR</a></h2>
+                                    <ul class="text-center">
+                                        <li><a href="">&Joy</a></li>
+                                        <li><a href="">분야별 사회공헌</a></li>
+                                        <li><a href="">꿈 바우처</a></li>
+                                    </ul>
+                                </div>
+                                <div class="wsub3">
+                                    <h2><a href=""><span></span>Ethical<br>Management</a></h2>
+                                    <ul class="text-center">
+                                        <li><a href="">동반성장</a></li>
+                                        <li><a href="">청음고(부정제보)</a></li>
+                                        <li><a href="">공정거래자율준수</a></li>
+                                    </ul>
+                                </div>
+                                <div class="wsub3">
+                                    <h2><a href=""><span></span>기업지배구조</a></h2>
+                                    <ul class="text-center">
+                                        <li><a href="">이사회 현황</a></li>
+                                        <li><a href="">이사회 내 위원회 현황</a></li>
+                                        <li><a href="">ESG 평가 등급</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="customer"><a href="" class="a"><span>CUSTOMER CENTER</span></a>
+                        <div class="wgnb4">
+                            <div class="center flex">
+                                <div class="wsub-customer">
+                                    <h2><a href="">FAQ</a></h2>
+                                    <h2><a href="">Q&A</a></h2>
+                                </div>
+                                <div class="wsub4">
+                                    <div>
+                                        <h2><a href=""><span></span>주류상식 가이드</a></h2>
+                                        <ul class="text-center">
+                                            <li><a href="">맥주 가이드</a></li>
+                                            <li><a href="">소주 가이드</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="wsub4etc">
+                                        <h2><a href=""><span></span>기타</a></h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="enb flex">
+                    <li><a href="" class="a">LOGIN</a></li>
+                    <li><a href="" class="a">JOIN</a></li>
+                    <li><a href="" class="a">RECRUIT</a></li>
+                    <li><a href="" class="a">LANGUAGE</a></li>
+                </ul>
+                <!-- 모바일버전 전용 햄버거메뉴 (common hide) -->
+                <a href="" class="ham">전체메뉴</a>
+            </nav>
+        </div>
+        <!-- 사이드 메뉴 네비게이션 -->
+       <section id="brand_header">
+        <div class="logo_official"></div>
+        <nav id="brand_gnb">
+            <ul>
+                <li class="gnb_a">
+                    <div class="main"><a href=""><span>맥주</span></a></div>
+                    <div class="sub">
+                        <ul>
+                            <li><a href="" style="background-image:url(img/sgnb/sub_a1.png);"><span>Kelly</span></a></li>
+                            <li><a href="" style="background-image:url(img/sgnb/sub_a2.png);"><span>TERRA</span></a></li>
+                            <li><a href="" style="background-image:url(img/sgnb/sub_a3.png);"><span>하이트</span></a></li>
+                            <li><a href="" style="background-image:url(img/sgnb/sub_a4.png);"><span>맥스</span></a></li>
+                            <li><a href="" style="background-image:url(img/sgnb/sub_a5.png);"><span>스타우트</span></a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="gnb_b">
+                    <div class="main"><a href=""><span>소주</span></a></div>
+                    <div class="sub">
+                        <ul>
+                            <li><a href="" style="background-image:url(img/sgnb/sub_b1.png);"><span>참이슬 fresh</span></a></li>
+                            <li><a href="" style="background-image:url(img/sgnb/sub_b2.png);"><span>진로</span></a></li>
+                            <li><a href="" style="background-image:url(img/sgnb/sub_b3.png);"><span>진로 1924 헤리티지</span></a></li>
+                            <li><a href="" style="background-image:url(img/sgnb/sub_b4.png);"><span>일품진로</span></a></li>
+                            <li><a href="" style="background-image:url(img/sgnb/sub_b5.png);"><span>일품진로 23년 산</span></a></li>
+                            <li><a href="" style="background-image:url(img/sgnb/sub_b6.png);"><span>진로골드</span></a></li>
+                            <li><a href="" style="background-image:url(img/sgnb/sub_b7.png);"><span>참이슬 담금주</span></a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="gnb_c">
+                    <div class="main"><a href=""><span>위스키</span></a></div>
+                    <div class="sub">
+                        <ul>
+                            <li><a href="" style="background-image:url(img/sgnb/sub_c1.png);"><span>더 클래스 1933</span></a></li>
+                            <li><a href="" style="background-image:url(img/sgnb/sub_c2.png);"><span>더 클래스 33˚</span></a></li>
+                            <li><a href="" style="background-image:url(img/sgnb/sub_c3.png);"><span>더 클래스</span></a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="gnb_d">
+                    <div class="main"><a href=""><span>와인</span></a></div>
+                    <div class="sub">
+                        <ul>
+                            <li><a href="" style="background-image:url(img/sgnb/sub_d1.png);"><span>진로 레드와인</span></a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="gnb_e">
+                    <div class="main"><a href="" ><span>수입와인</span></a></div>
+                    <div class="sub">
+                        <ul>
+                            <li><a href="" style="background-image:url(img/sgnb/sub_e1.png);"><span>프랑스</span></a></li>
+                            <li><a href="" style="background-image:url(img/sgnb/sub_e2.png);"><span>이탈리아</span></a></li>
+                            <li><a href="" style="background-image:url(img/sgnb/sub_e3.png);"><span>스페인</span></a></li>
+                            <li><a href="" style="background-image:url(img/sgnb/sub_e4.png);"><span>독일</span></a></li>
+                            <li><a href="" style="background-image:url(img/sgnb/sub_e5.png);"><span>미국</span></a></li>
+                            <li><a href="" style="background-image:url(img/sgnb/sub_e6.png);"><span>캐나다</span></a></li>
+                            <li><a href="" style="background-image:url(img/sgnb/sub_e7.png);"><span>아르헨티나</span></a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="gnb_f">
+                    <div class="main"><a href=""><span>사케</span></a></div>
+                    <div class="sub">
+                        <ul>
+                            <li><a href="" style="background-image:url(img/sgnb/sub_f1.png);"><span>키쿠스이</span></a></li>
+                            <li><a href="" style="background-image:url(img/sgnb/sub_f2.png);"><span>다카시미즈</span></a></li>
+                            <li><a href="" style="background-image:url(img/sgnb/sub_f3.png);"><span>아마노토</span></a></li>
+                            <li><a href="" style="background-image:url(img/sgnb/sub_f4.png);"><span>마보로시</span></a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="gnb_g">
+                    <div class="main"><a href=""><span>기타주류</span></a></div>
+                    <div class="sub">
+                        <ul>
+                            <li><a href="" style="background-image:url(img/sgnb/sub_g1.png);"><span>필라이트</span></a></li>
+                            <li><a href="" style="background-image:url(img/sgnb/sub_g2.png);"><span>이슬톡톡</span></a></li>
+                            <li><a href="" style="background-image:url(img/sgnb/sub_g3.png);"><span>하이트 망고링고</span></a></li>
+                            <li><a href="" style="background-image:url(img/sgnb/sub_g4.png);"><span>비타500에이슬</span></a></li>
+                            <li><a href="" style="background-image:url(img/sgnb/sub_g5.png);"><span>아이셔에이슬</span></a></li>
+                            <li><a href="" style="background-image:url(img/sgnb/sub_g6.png);"><span>메로나에이슬</span></a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="gnb_h">
+                    <div class="main"><a href=""><span>인터내셔널</span></a></div>
+                    <div class="sub">
+                        <ul>
+                            <li><a href="" style="background-image:url(img/sgnb/sub_h1.png);"><span>Kronenbourg 1664</span></a></li>
+                            <li><a href="" style="background-image:url(img/sgnb/sub_h2.png);"><span>SOMERSBY</span></a></li>
+                            <li><a href="" style="background-image:url(img/sgnb/sub_h3.png);"><span>PAULANER</span></a></li>
+                            <li><a href="" style="background-image:url(img/sgnb/sub_h4.png);"><span>KIRIN ICHIBAN</span></a></li>
+                            <li><a href="" style="background-image:url(img/sgnb/sub_h5.png);"><span>SINGHA</span></a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+       </section>
+   </header>
+   <!-- 타이틀영역 -->
+   <div id="subtitle" class="height-full">
+        <div class="titleslick wrap height-full flex flex-center flex-column flex-align-center">
+            <img src="img/i1.png" alt="켈리 포스터">
+            <img src="img/i2.png" alt="테라 포스터">
+            <img src="img/i3.png" alt="참이슬 포스터">
+            <img src="img/i4.png" alt="진로 포스터">
+            <img src="img/i5.png" alt="필라이트 포스터">
+            <img src="img/i6.png" alt="일품진로 OAK43 포스터">
+            <img src="img/i7.png" alt="일품진로 포스터">
+            <img src="img/i8.jpg" alt="진로1924 포스터">
+            <img src="img/i9.png" alt="매화수 포스터">
+            <img src="img/i10.png" alt="에스라이트 포스터">
+        </div>
+   </div>
+   <!-- 메인영역 -->
+   <main>
+        <section id="product">
+            <div class="wrap paddingT50 paddingB100">
+                <h2 class="h4">사용자들이 가장 많이 찾으신 컨텐츠를 소개합니다<span>HITE!</span></h2>
+                <ul class="list">
+                    <li>
+                        <figure><img src="img/1.png" alt=""></figure>
+                        <h3>1 참이슬</h3>
+                        <p>국내유일 청정 대나무숯으로<br>4번 걸러 더 깨끗해진<br>참이슬 fresh</p>
+                        <a href="">LEARN MORE</a>
+                    </li>
+                    <li>
+                        <figure><img src="img/2.png" alt=""></figure>
+                        <h3>2 TERRA</h3>
+                        <p>청정라거<br>시대개막<br>TERRA</p>
+                        <a href="">LEARN MORE</a>
+                    </li>
+                    <li>
+                        <figure><img src="img/3.png" alt=""></figure>
+                        <h3>3 보도자료</h3>
+                        <p>언론 속 하이트진로의<br>다양한 소식을 알려 드립니다.</p>
+                        <a href="">LEARN MORE</a>
+                    </li>
+                    <li>
+                        <figure><img src="img/4.png" alt=""></figure>
+                        <h3>4 Kelly</h3>
+                        <p>덴마크 프리미엄 맥아 100%<br>- 더블 숙성 라거 켈리</p>
+                        <a href="">LEARN MORE</a>
+                    </li>
+                    <li>
+                        <figure><img src="img/5.png" alt=""></figure>
+                        <h3>5 사회공헌</h3>
+                        <p>하이트진로의 사회공헌 활동은<br>모두가 즐겁고 행복한 세상을<br>만들기 위한 실천입니다.</p>
+                        <a href="">LEARN MORE</a>
+                    </li>
+                    <li>
+                        <figure><img src="img/6.png" alt=""></figure>
+                        <h3>6 hite</h3>
+                        <p>EXTRA COLD공법으로<br>더 차갑게 돌아왔다</p>
+                        <a href="">LEARN MORE</a>
+                    </li>
+                    <li>
+                        <figure><img src="img/7.png" alt=""></figure>
+                        <h3>7 진로</h3>
+                        <p>진로 이즈 백!<br>소주의 원조, 진로가 돌아왔다</p>
+                        <a href="">LEARN MORE</a>
+                    </li>
+                    <li>
+                        <figure><img src="img/8.png" alt=""></figure>
+                        <h3>8 온에어 TVCF</h3>
+                        <p>하이트진로의 최신 광고영상을 소개합니다.</p>
+                        <a href="">LEARN MORE</a>
+                    </li>
+                    <li>
+                        <figure><img src="img/9.png" alt=""></figure>
+                        <h3>9 공장견학</h3>
+                        <p>하이트진로만의 최첨단 설비와<br>친환경이념이 담긴 생산공정을<br>직접 만나보세요.</p>
+                        <a href="">LEARN MORE</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section id="sns">
+            <div class="wrap paddingB100 paddingT100">
+                <h2 class="h4 text-center">최신 하이트 진로 SNS</h2>
+
+                <ul class="snsslick">
+                    <li class="sns1">
+                        <a href="">
+                            <h3 class="h5">FACEBOOK</h3>
+                            <p class="p">미숫가루 VS 수정과<br>@@할매 입맛 취저ㅋㅋ</p>
+                        </a>
+                    </li>
+                    <li class="sns2">
+                        <a href="">
+                            <h3 class="h5">INSTAGRAM</h3>
+                            <p class="p">여름 휴가 필수템으로 빠질 수 없는<br>귀여운 #이슬방울에디션 💧</p>
+                        </a>
+                    </li>
+                    <li class="sns3">
+                        <a href="">
+                            <h3 class="h5">BLOG</h3>
+                            <p class="p">참이슬과 떠나는 세계여행 15탄!<br>태국 똠얌꿍 레시피</p>
+                        </a>
+                    </li>
+                    <li class="sns4">
+                        <a href="">
+                            <h3 class="h5">FACEBOOK</h3>
+                            <p class="p">ㄹㅇ탕친자 인증.jpg<br>@@도전자 받음</p>
+                        </a>
+                    </li>
+                    <li class="sns5">
+                        <a href="">
+                            <h3 class="h5">INSTAGRAM</h3>
+                            <p class="p">울창한 나무 그늘 아래서<br>서늘한 바람이 느껴지는<br>이 계절의 찬란함</p>
+                        </a>
+                    </li>
+                    <li class="sns6">
+                        <a href="">
+                            <h3 class="h5">BLOG</h3>
+                            <p class="p">세상에 하나뿐인 필리 터프팅 러그 만들기</p>
+                        </a>
+                    </li>
+                    <li class="sns7">
+                        <a href="">
+                            <h3 class="h5">FACEBOOK</h3>
+                            <p class="p">여름의 끝이 보이는 말복!<br>뭘 먹어야 마지막까지 잘 이겨낼까?🤔</p>
+                        </a>
+                    </li>
+                    <li class="sns8">
+                        <a href="">
+                            <h3 class="h5">INSTAGRAM</h3>
+                            <p class="p">그림자를 뚫고 나오는 미모👥</p>
+                        </a>
+                    </li>
+                    <li class="sns9">
+                        <a href="">
+                            <h3 class="h5">BLOG</h3>
+                            <p class="p">초예술적 아트 콜라보!<br>진로X어반브레이크 두껍라운지<br>현장 스케치</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+   </main>
+   <!-- 하단영역 -->
+   <footer>
+        <div class="wrap paddingT100 paddingB100">
+            <ul class="fnb flex">
+                <li>
+                    <h2><a href="">COMPANY</a></h2>
+                    <ul class="sublist">
+                        <li><a href="">인사말</a></li>
+                        <li><a href="">경영철학</a></li>
+                        <li><a href="">연혁</a></li>
+                        <li><a href="">Introduction</a></li>
+                        <li><a href="">Investment</a></li>
+                        <li><a href="">Location</a></li>
+                        <li><a href="">Factory</a></li>
+                        <li><a href="">Recruit</a></li>
+                        <li><a href="">Sports</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="">SOCIAL & MEDIA</a></h2>
+                    <ul class="sublist">
+                        <li><a href="">Social board</a></li>
+                        <li><a href="">Media</a></li>
+                        <li><a href="">마케팅 성공사례</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="">ESG</a></h2>
+                    <ul class="sublist">
+                        <li><a href="">지속가능환경경영</a></li>
+                        <li><a href="">식품안전경영</a></li>
+                        <li><a href="">안전보건경영</a></li>
+                        <li><a href="">CSR</a></li>
+                        <li><a href="">Ethical Managemaent</a></li>
+                        <li><a href="">기업지배구조</a></li>
+                        <li><a href="">지속가능경영보고서</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="">CUSTOMER CENTER</a></h2>
+                    <ul class="sublist">
+                        <li><a href="">FAQ</a></li>
+                        <li><a href="">Q & A</a></li>
+                        <li><a href="">주류상식 가이드</a></li>
+                        <li><a href="">기타</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="">BRAND</a></h2>
+                    <ul class="sublist">
+                        <li><a href="">맥주</a></li>
+                        <li><a href="">소주</a></li>
+                        <li><a href="">위스키</a></li>
+                        <li><a href="">와인</a></li>
+                        <li><a href="">수입와인</a></li>
+                        <li><a href="">사케</a></li>
+                        <li><a href="">기타 주류</a></li>
+                        <li><a href="">인터내셔널</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="fnb2 flex">
+                <li class="fnb2box"><a class="fba p" href="">개인정보처리방침</a></li>
+                <li class="fnb2box"><a class="fba p" href="">회원이용약관</a></li>
+                <li class="fnb2box"><a class="fba p" href="">이메일무단수집거부</a></li>
+                <li class="fnb2box"><a class="fba p" href="">동반성장</a></li>
+                <li class="fnb2box"><a class="fba p" href="">청음고(부정제보)</a></li>
+                <li class="fnb2box"><a class="fba p" href="">공시정보 관리규정</a></li>
+                <li class="fnb2box"><a class="fba p" href="">공정거래자율준수</a></li>
+                <li class="fsns fnb2box">
+                    <a class="snstitle p" href="">하이트진로 SNS <span></span></a>
+                        <ul class="snslist">
+                            <li><a class="p" href="">페이스북</a></li>
+                            <li><a class="p" href="">트위터</a></li>
+                            <li><a class="p" href="">유튜브</a></li>
+                            <li><a class="p" href="">테라 인스타그램</a></li>
+                            <li><a class="p" href="">켈리 인스타그램</a></li>
+                            <li><a class="p" href="">참이슬 인스타그램</a></li>
+                            <li><a class="p" href="">이슬톡톡 인스타그램</a></li>
+                            <li><a class="p" href="">진로 인스타그램</a></li>
+                            <li><a class="p" href="">진로 프리미엄 소주</a></li>
+                        </ul>
+                </li>
+                <li class="ffm fnb2box">
+                    <a class="fmtitle p" href="">패밀리 사이트 <span></span></a>
+                    <ul class="fmlist">
+                        <li><a class="p" href="">하이트진로 홀딩스</a></li>
+                        <li><a class="p" href="">진로 아메리카</a></li>
+                        <li><a class="p" href="">하이트진로음료㈜</a></li>
+                        <li><a class="p" href="">블루 헤런</a></li>
+                        <li><a class="p" href="">진로 재팬</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <address class="p">(06075) 서울특별시 강남구 영동대로 714 하이트진로빌딩 / 대표전화 080-210-0150 / 사업자등록번호 214-81-00777</address>
+            <p class="p copyright">Copyright© 2016 HITEJINRO CO.LTD. ALL RIGHTS RESERVED.</p>
+        </div>
+        <a href="#top" class="btop">TOP</a>
+   </footer>
+</body>
+</html>
+</html>

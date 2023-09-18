@@ -1,0 +1,62 @@
+.sidebox {
+  
+  width: 210px;
+  height: 100%;
+  position: fixed;
+  background: beige;
+  z-index: 998;
+  right: 0;
+  top: 0;
+  display: flex;
+}
+.sidebox .brandbox {
+  
+  width: 50%;
+}
+.sidebox .brandbox .brandheader {
+  
+}
+.sidebox .brandbox .brandheader h2 {
+  
+  text-align: center;
+  padding: 10px 0;
+  color: white;
+  font-weight: 600;
+}
+.sidebox .brandbox nav {
+  
+  height: 100%;
+}
+.sidebox .brandbox nav > ul {
+  
+  height: 100%;
+}
+.sidebox .brandbox nav > ul li {
+  
+  height: calc(100% / 8);
+}
+.sidebox .brandbox nav > ul li a {
+  
+}
+.sidebox .brandbox nav > ul li a img {
+  
+}
+.sidebox .iconbox {
+  
+  width: 50%;
+}
+.sidebox .iconbox > div.colorbox {
+  
+}
+.sidebox .iconbox > div.colorbox ul {
+  
+}
+.sidebox .iconbox > div.colorbox ul li {
+  
+}
+.sidebox .iconbox > div.colorbox ul li a {
+  
+}
+.sidebox .iconbox > div.colorbox ul li a img {
+  
+}
