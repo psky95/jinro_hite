@@ -6,8 +6,35 @@ div#subtitle .wrap {
   max-width: 100%;
   position: relative;
 }
-div#subtitle .wra img{
+div#subtitle .wrap img{
   width: 100%;
+}
+div#subtitle .wrap .slick-dots li button::before{
+  color: white;
+}
+div#subtitle .wrap .slick-dots li.slick-active button:before{
+    opacity: 0.85;
+    color: white;
+    border: 1px solid white;
+    border-radius: 50%;
+    color: white;
+    padding: 0;
+    top: -1px;
+}
+div#subtitle .wrap .slick-prev{
+  
+  left: 400px;
+}
+div#subtitle .wrap .slick-next{
+  right: 400px;
+}
+div#subtitle .wrap .slick-prev, div#subtitle .wrap .slick-next{
+  
+  opacity: .75;
+}
+div#subtitle .wrap .slick-prev:hover, div#subtitle .wrap .slick-next:hover{
+  
+  opacity: 1;
 }
 
 

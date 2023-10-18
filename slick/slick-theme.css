@@ -13,39 +13,37 @@
 {
     font-size: 0;
     line-height: 0;
-
     position: absolute;
     top: 50%;
-
     display: block;
-
     width: 55px;
     height: 55px;
     padding: 0;
     -webkit-transform: translate(0, -50%);
     -ms-transform: translate(0, -50%);
     transform: translate(0, -50%);
-
     cursor: pointer;
-
     color: transparent;
     border: none;
     outline: none;
     background: white;
     border-radius: 50%;
-    opacity: 0.45;
     align-items: center;
     display: flex;
     justify-content: center;
+    opacity: 1;
+    box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.2);
 }
 .slick-prev:hover,
-.slick-prev:focus,
 .slick-next:hover,
-.slick-next:focus
 {
     color: transparent;
     outline: none;
-    opacity: .75;
+    opacity: 0.75;
+}
+.slick-prev:focus,
+.slick-next:focus{
+    
 }
 .slick-prev:hover:before,
 .slick-prev:focus:before,
@@ -82,14 +80,15 @@
 .slick-next:before{
     background-image: url(../img/arrowR.svg);
 }
-
+.slick-next:hover,
+.slick-prev:hover{
+ 
+  opacity: .75;
+}
 .slick-prev
 {
-    left: 400px;
+    left: 25px;
     z-index: 1;
-}
-.slick-prev:hover{
-    
 }
 [dir='rtl'] .slick-prev
 {
@@ -107,7 +106,7 @@
 
 .slick-next
 {
-    right: 400px;
+    right: 25px;
 }
 [dir='rtl'] .slick-next
 {
@@ -147,12 +146,10 @@
 .slick-dots li
 {
     position: relative;
-
     display: inline-block;
-
-    width: 20px;
+    width: 30px;
     height: 20px;
-    margin: 0 5px;
+    margin: 0;
     padding: 0;
 
     cursor: pointer;
@@ -181,38 +178,33 @@
     outline: none;
 }
 .slick-dots li button:hover:before,
-.slick-dots li button:focus:before
-{
-    opacity: 1;
+.slick-dots li button:focus:before{
+  opacity: 1;
 }
-.slick-dots li button:before
-{
+.slick-dots li button:before{
     font-family: 'slick';
     font-size: 25px;
     line-height: 15px;
-
     position: absolute;
     top: 0px;
     left: 0;
-
     width: 20px;
     height: 20px;
-
     content: '•';
     text-align: center;
-
     opacity: 0.85;
-    color: white;
+    color: black;
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-.slick-dots li.slick-active button:before
-{
+.slick-dots li.slick-active button:before{
     opacity: 0.85;
     color: white;
     border: 1px solid white;
     border-radius: 50%;
-    padding: 0px;
-    top: 0px;
+    color: black;
+    border: 1px solid black;
+    padding: 0;
+    top: -1px;
 }

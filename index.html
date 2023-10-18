@@ -3,22 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://psky95.github.io/jinro_hite/">
+    <meta property="og:description" content="하이트 진로 홈페이지">
+    <meta property="og:keywords" content="소주,알코올,맥주,하이트 진로,술">
+    <meta property="og:title" content="하이트 진로">
+    <meta name="og:image" content="이미지프로필삽입예정"/>
+    <meta name="description" content="하이트 진로 홈페이지">
+    <meta name="keywords" content="소주,알코올,맥주,하이트 진로,술">
     <title>하이트진로</title>
-
-    <!-- 지정 클래스 스타일 -->
     <style>
         .hover-color{
             color: #31ffe9;
             display: inline-block;
         }
     </style>
-
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.css">
     <link rel="stylesheet" href="css/reset.css">
-
     <!-- 프리텐다드 폰트적용 -->
-    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css" />
-
+    <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/header-wgnb.css">
@@ -28,11 +31,11 @@
     <link rel="stylesheet" href="css/subtitle.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/footer.css">
-
      <!-- 제이쿼리 연결 -->
-    <script src="https://code.jquery.com/jquery-3.7.0.min.js" type="text/javascript"></script>
-    <script type="text/javascript">
-        
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="js/wgnb.js"></script>
+    <script>
+        // 푸터 & protect & 사이드 탑스크롤 js
         $(document).ready(function(){
             // 푸터영역 SNS / 패밀리사이트 토글슬라이드
             $("footer div.wrap ul.fnb2 li .snslist").hide();
@@ -44,99 +47,7 @@
             $("footer div.wrap ul.fnb2 .ffm").hover(function(){
                 $("footer div.wrap ul.fnb2 li .fmlist").slideToggle(300);
             });
-            
-            // gnb li hover시 span 스타일링
-            // for (let i=0; i<4; i++){
-            //     $("header .wrap nav ul.gnb li("+i+")").hover(function(){
-
-            //     });
-            // }
-
-        });
-
-         $(document).ready(function(){
-            //  wgnb 스타일
-            for (let i = 0; i < 6; i++) {
-                $("#top .wsub:eq("+i+")").hover(
-                    function(){
-                        $(this).css("background", "rgba(1, 27, 245, .4)");
-                        $(this).children("h2").children("a").css("color", "#31ffe9");
-                        $(this).children("h2").children("a").children("span").css("border-top", "1px solid#31ffe9");
-                    },
-                    function(){
-                        $(this).css("background", "");
-                        $(this).children("h2").children("a").css("color", "");
-                        $(this).children("h2").children("a").children("span").css("border-top", "");
-                    }
-                );
-            }
-            // wgnb2 스타일
-            for (let i = 0; i < 3; i++) {
-                $("#top .wsub2:eq("+i+")").hover(
-                    function(){
-                        $(this).css("background", "rgba(1, 27, 245, .4)");
-                        $(this).children("h2").children("a").css("color", "#31ffe9");
-                        $(this).children("h2").children("a").children("span").css("border-top", "1px solid#31ffe9");
-                    },
-                    function(){
-                        $(this).css("background", "");
-                        $(this).children("h2").children("a").css("color", "");
-                        $(this).children("h2").children("a").children("span").css("border-top", "");
-                    }
-                );
-            }
-            // wgnb3 스타일
-            for (let i = 0; i < 6; i++) {
-                $("#top .wsub3:eq("+i+")").hover(
-                    function(){
-                        $(this).css("background", "rgba(1, 27, 245, .4)");
-                        $(this).children("h2").children("a").css("color", "#31ffe9");
-                        $(this).children("h2").children("a").children("span").css("border-top", "1px solid#31ffe9");
-                    },
-                    function(){
-                        $(this).css("background", "");
-                        $(this).children("h2").children("a").css("color", "");
-                        $(this).children("h2").children("a").children("span").css("border-top", "");
-                    }
-                );
-            }
-            // wgnb4 스타일
-            for (let i = 0; i < 2; i++) {
-                $("#top .wsub4 div:eq("+i+")").hover(
-                    function(){
-                        $(this).css("background", "rgba(1, 27, 245, .4)");
-                        $(this).children("h2").children("a").css("color", "#31ffe9");
-                        $(this).children("h2").children("a").children("span").css("border-top", "1px solid#31ffe9");
-                    },
-                    function(){
-                        $(this).css("background", "");
-                        $(this).children("h2").children("a").css("color", "");
-                        $(this).children("h2").children("a").children("span").css("border-top", "");
-                    }
-                );
-            }
-            // wgnb 토글 슬라이드
-            $("#top .wgnb").hide();
-            $("#top .wgnb2").hide();
-            $("#top .wgnb3").hide();
-            $("#top .wgnb4").hide();
-            $("header .wrap nav ul.gnb .company").hover(function(){
-                $("#top .wgnb").stop().slideToggle(300);
-            });
-            $("header .wrap nav ul.gnb .social").hover(function(){
-                $("#top .wgnb2").stop().slideToggle(300);
-            });
-            $("header .wrap nav ul.gnb .esg").hover(function(){
-                $("#top .wgnb3").stop().slideToggle(300);
-            });
-            $("header .wrap nav ul.gnb .customer").hover(function(){
-                $("#top .wgnb4").stop().slideToggle(300);
-            });
-
-        });
-
-        //  protect 메뉴 mosuehover
-        $(document).ready(function(){
+            //  protect 메뉴 mosuehover
             for(let i=0;i<9;i++){
                 $("#product .wrap .list li:eq("+i+") figure").nextAll().wrapAll("<div class='textwrap'></div>");
                 $("#product .wrap .list li:eq("+i+") .textwrap h3").insertBefore("#product .wrap .list li:eq('+i+') .textwrap");   
@@ -157,16 +68,20 @@
                     }
                     
                 );
-                
+            // 최상단으로 스크롤링하는 함수 정의
+            function scrollToTop() {
+                $("html, body").animate({ scrollTop: 0 }, "slow");
+            }
+            // 버튼 클릭 시 스크롤링 함수 호출
+            $("#scrollToTopButton").on("click", scrollToTop);
         });
-
     </script> 
-
     <!-- 슬릭 -->
     <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
-    <script type="text/javascript" src="slick/slick.js"></script>
+    <script src="slick/slick.js"></script>
     <script>
+        // 타이틀 슬릭
         $(document).ready(function(){
             $('.titleslick').slick({
                 autoplay: true,
@@ -188,7 +103,6 @@
             });
         });
     </script>
-
 </head>
 <body>
     <!-- 상단영역 -->
@@ -199,7 +113,7 @@
                     <a href="" class="a">하이트진로</a>
                 </h1>
                 <ul class="gnb flex">
-                    <li class="company"><a href="" class="a"><span>COMPANY</span></a>
+                    <li class="company"><a href="" class="a"><span class="spanhover">COMPANY</span></a>
                         <div class="wgnb">
                             <div class="center flex">
                                 <div class="wsub-company">
@@ -265,7 +179,7 @@
                             </div>
                         </div>
                     </li>
-                    <li class="social"><a href="" class="a"><span>SOCIAL & MEDIA</span></a>
+                    <li class="social"><a href="" class="a"><span class="spanhover">SOCIAL & MEDIA</span></a>
                         <div class="wgnb2">
                             <div class="center flex">
                                 <div class="wsub2">
@@ -294,7 +208,7 @@
                             </div>
                         </div>
                     </li>
-                    <li class="esg"><a href="" class="a"><span>ESG</span></a>
+                    <li class="esg"><a href="" class="a"><span class="spanhover">ESG</span></a>
                         <div class="wgnb3">
                             <div class="center flex">
                                 <div class="wsub3">
@@ -349,7 +263,7 @@
                             </div>
                         </div>
                     </li>
-                    <li class="customer"><a href="" class="a"><span>CUSTOMER CENTER</span></a>
+                    <li class="customer"><a href="" class="a"><span class="spanhover">CUSTOMER CENTER</span></a>
                         <div class="wgnb4">
                             <div class="center flex">
                                 <div class="wsub-customer">
@@ -373,10 +287,17 @@
                     </li>
                 </ul>
                 <ul class="enb flex">
-                    <li><a href="" class="a">LOGIN</a></li>
-                    <li><a href="" class="a">JOIN</a></li>
+                    <li><a href="" class="a login">LOGIN</a></li>
+                    <li><a href="" class="a join">JOIN</a></li>
                     <li><a href="" class="a">RECRUIT</a></li>
-                    <li><a href="" class="a">LANGUAGE</a></li>
+                    <li class="language">
+                        <a href="" class="a service_language">LANGUAGE</a>
+                        <ul class="langbox">
+                            <li><a href="" class="en p">ENGLISH</a></li>
+                            <li><a href="" class="ja p">JAPANESE</a></li>
+                            <li><a href="" class="chi p">CHINESE</a></li>
+                        </ul>
+                    </li>
                 </ul>
                 <!-- 모바일버전 전용 햄버거메뉴 (common hide) -->
                 <a href="" class="ham">전체메뉴</a>
@@ -384,6 +305,7 @@
         </div>
         <!-- 사이드 메뉴 네비게이션 -->
        <section id="brand_header">
+        <h2 class="hide">브랜드 사이드 메뉴헤더</h2>
         <div class="logo_official"></div>
         <nav id="brand_gnb">
             <ul>
@@ -723,8 +645,7 @@
             <address class="p">(06075) 서울특별시 강남구 영동대로 714 하이트진로빌딩 / 대표전화 080-210-0150 / 사업자등록번호 214-81-00777</address>
             <p class="p copyright">Copyright© 2016 HITEJINRO CO.LTD. ALL RIGHTS RESERVED.</p>
         </div>
-        <a href="#top" class="btop">TOP</a>
+        <a href="#top" id="scrollToTopButton" class="btop">TOP</a>
    </footer>
 </body>
-</html>
 </html>

@@ -185,19 +185,16 @@
 #sns .slick-dots li button{
   
 }
-#sns .slick-dots li button::before{
-  
+/* #sns .slick-dots li button::before{
   color: gray;
   font-size: 50px;
-}
-#sns .slick-dots li.slick-active button::before{
-  
+} */
+/* #sns .slick-dots li.slick-active button::before{
   color: black;
   border: none;
   font-size: 50px;
-}
-#sns .snsslick li:not(#sns .slick-dots li){
-  
+} */
+#sns .snsslick li:not(#sns .slick-dots li){ 
   display: flex !important;
   flex-direction: column;
   align-items: center;
