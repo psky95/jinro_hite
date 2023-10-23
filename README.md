@@ -6,7 +6,7 @@
 
 
 ## 클론 웹사이트 스크린 샷 & 링크
-클론코딩페이지 url : (https://psky95.github.io/jinro_hite/)
+클론코딩페이지 url : (https://psky95.github.io/jinro_hite/)  
 ![Screenshot-2023-10-23-at-12-57-10-하이트-진로](https://github.com/psky95/jinro_hite/assets/142555226/49e80db5-68e1-4bcf-8ea4-2ee18af4f776)
 
 
